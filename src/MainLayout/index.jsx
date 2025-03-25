@@ -1,18 +1,18 @@
-import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import styles from "./index.module.css";
+import { Outlet } from "react-router-dom";
+import SideMenu from "../Components/SideMenu";
 
 export default function MainLayout() {
   return (
-    <div className="h-100 col-12 bg-danger d-flex">
-      <nav className="d-flex flex-column">
-        <Link to={"/profile"}>profile</Link>
-        <Link to={"/chats"}>chats</Link>
-        <Link to={"/groups"}>groups</Link>
-        <Link to={"/contacts"}>contacts</Link>
-        <Link to={"/settings"}>settings</Link>
-      </nav>
-      <Outlet />
-      <h1>Messages</h1>
+    <div className="col-12 h-100 bg-danger d-flex flex-column flex-lg-row">
+      <SideMenu />
+
+      <div className="px-3" id={styles.outlet}>
+        <Outlet />
+      </div>
+      <h1 className="d-none bg-success d-lg-block flex-grow-1 h-100">
+        Messages
+      </h1>
     </div>
   );
 }

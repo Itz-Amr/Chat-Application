@@ -1,0 +1,25 @@
+#sideMenu {
+  padding: 10px;
+  height: 100%;
+
+  @media screen and (max-width: 991px) {
+    height: auto;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  a {
+    color: rgb(135, 138, 146);
+    padding: 15px;
+
+    font-size: 20px;
+  }
+
+  .activeLink {
+    background-color: rgb(247, 247, 255);
+    border-radius: 10px;
+    color: rgb(114, 105, 239);
+  }
+}

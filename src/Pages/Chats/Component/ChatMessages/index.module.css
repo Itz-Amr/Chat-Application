@@ -1,0 +1,55 @@
+.ChatMessages {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 300ms linear;
+  padding: 1rem;
+
+  &:hover {
+    background-color: #e6ebf5;
+  }
+
+  .userStatus {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #06d6a0;
+    bottom: 0;
+    right: 0;
+  }
+
+  img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  p {
+    color: #9ba0b4;
+    font-size: 14px;
+  }
+
+  #uniq {
+    color: #9ba0b4;
+    font-size: 11px;
+  }
+
+  .userMsgs {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    font-weight: 600;
+    font-size: 10px;
+    color: #ef476f;
+    background-color: rgba(239, 71, 111, 0.18);
+    border-radius: 50%;
+  }
+}
+
+.active {
+  background-color: #e6ebf5;
+}

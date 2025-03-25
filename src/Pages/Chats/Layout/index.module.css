@@ -1,0 +1,49 @@
+#chat {
+  height: 100vh;
+  background-color: #f5f7fb;
+  overflow: hidden;
+
+  #input {
+    position: relative;
+
+    input {
+      width: 100%;
+      border: 0;
+      outline: 0;
+      padding: 10px;
+      padding-left: 50px;
+      border-radius: 10px;
+      background-color: #e6ebf5;
+    }
+
+    .searchIcon {
+      position: absolute;
+      top: 13px;
+      left: 15px;
+      font-size: 1.2rem;
+      color: #7a7fa6;
+    }
+  }
+
+  #chatContainer {
+    height: 100%;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 9px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #e9ebef;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #dfe0e2;
+    }
+  }
+}

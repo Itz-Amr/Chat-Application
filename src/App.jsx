@@ -1,20 +1,20 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import MainLayout from "./MainLayout";
+import { usePath } from "./store";
 
 export default function App() {
+  const { path } = usePath();
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<MainLayout />}>
-          <Route path="/profile" element={<h1>Profiel</h1>} />
-          <Route path="/chats" element={<h1>Chats</h1>} />
-          <Route path="/groups" element={<h1>Groups</h1>} />
-          <Route path="/contacts" element={<h1>Contacts</h1>} />
-          <Route path="/settings" element={<h1>Settings</h1>} />
+          {path.map((route, index) => (
+            <Route key={index} path={route.path} element={route.element} />
+          ))}
         </Route>
 
-        <Route>
+        <Route path="/">
           <Route path="/login" element={<h1>Login</h1>} />
           <Route path="/register" element={<h1>Register</h1>} />
           <Route path="*" element={<h1>404</h1>} />
